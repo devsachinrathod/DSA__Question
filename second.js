@@ -20,7 +20,16 @@ function f1(n){
         console.log(i);
     }
 }
-f1(400);
+
+function f2(n){
+    for (let i = 1; i < n; i++) {
+        for (let j = 1; j < n; j+=i) {
+            console.log(i, " ", j);
+        }
+    }
+}
+f2(40);
+// f1(40);
 // analixeComplexity();
 // PrintHello();
 // PrintHelloAgain();
