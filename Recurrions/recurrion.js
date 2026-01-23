@@ -16,10 +16,23 @@
 // }
 // let step = [21, 2, 4, 6, 8, 67];
 // console.log("Highest Step:", realBackTracking(step)[0]);
-function reverseString(str) {
-  if (str === "") return "";      // base case
-  return reverseString(str.slice(1)) + str[0];
+// function reverseString(str) {
+//   if (str === "") return "";      // base case
+//   return reverseString(str.slice(1)) + str[0];
+// }
+
+// console.log(reverseString("Hiithere")); // "erehtiiH"
+
+
+function eligibleForKidneyPatients(info, age, gender) {
+  let kidneyObj = {
+    name: info,
+    age: age,
+    gender: gender,
+    hobbies: ["Reading", "Coding", "Traveling"]
+  };
+
+  return kidneyObj;
 }
 
-console.log(reverseString("Hiithere")); // "erehtiiH"
-
+console.log(eligibleForKidneyPatients("Alice", 25, "Female"));
