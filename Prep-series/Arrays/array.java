@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 class ArrayStore {
     int[] arr = new int[10]; // storage
     int index = 0;           // tracks position
@@ -42,7 +43,25 @@ class ArrayStore {
             }
         }
         return false;
-    
+
+    }
+
+    public int calculateFreqValue(){
+
+        int count = 0;
+         ArrayList<Integer> newArr = new ArrayList<>();
+        for(int i = 0; i<index ; i++){
+            for(int j = 0;  j< i ; j++){
+                if(arr[i] == arr[j]){
+                    count++;
+                    newArr.add(arr[i]);
+                }
+            }
+        }
+    System.out.println("the duplicates count " + count);
+    System.out.println("the duplicates array" +  newArr);
+        return count;
+
     }
 
     public static void main(String[] args) {
@@ -50,11 +69,14 @@ class ArrayStore {
 
         obj.insert(12);
         obj.insert(10);
+        obj.insert(10);
+        obj.insert(10);
+        obj.insert(10);
         obj.insert(15);
         obj.insert(10); // duplicate
         obj.insert(20);
         obj.displayTheDuplicateValue();
-
+     obj.calculateFreqValue();
         obj.printAll();
     }
 }
