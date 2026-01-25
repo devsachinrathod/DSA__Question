@@ -34,6 +34,7 @@ class ArrayStore {
         System.out.println("Not Found");
     }
      public boolean displayTheDuplicateValue(){
+
         for(int i=0;i<index;i++){
             for(int j=i+1;j<index;j++){
                 if(arr[i]==arr[j]){
@@ -45,6 +46,22 @@ class ArrayStore {
         return false;
 
     }
+
+public int removeDuplicates(int[] nums) {
+    if (nums.length == 0) return 0;
+
+    int index = 1;
+
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] != nums[i - 1]) {
+            nums[index] = nums[i];
+            index++;
+        }
+    }
+
+    return index;
+}
+
 
     public int calculateFreqValue(){
 
@@ -76,7 +93,8 @@ class ArrayStore {
         obj.insert(10); // duplicate
         obj.insert(20);
         obj.displayTheDuplicateValue();
-     obj.calculateFreqValue();
+        obj.calculateFreqValue();
+        obj.removeDuplicates([1,2,4,3,2]);
         obj.printAll();
     }
 }
