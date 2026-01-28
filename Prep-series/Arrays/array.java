@@ -98,3 +98,35 @@ public int removeDuplicates(int[] nums) {
         obj.printAll();
     }
 }
+
+//dividing array
+class Solution {
+    public int[][] divideArray(int[] nums, int k) {
+        int sorted = sort(nums);
+        int n = nums.length;
+
+       if(n % 3 != 0){
+         System.out.println("The array can not divied");
+       }
+       int size = n /3;
+       int [] part1 = new int[size];
+        int [] part2 = new int[size];
+         int [] part3 = new int[size];
+ // first part
+        for (int i = 0; i < size; i++) {
+            part1[i] = arr[i];
+        }
+
+        // second part
+        for (int i = 0; i < size; i++) {
+            part2[i] = arr[i + size];
+        }
+
+        // third part
+        for (int i = 0; i < size; i++) {
+            part3[i] = arr[i + 2 * size];
+        }
+        return part1, part2,part3;
+    }
+
+}
