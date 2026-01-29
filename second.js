@@ -1,35 +1,65 @@
-import PrintHello from './First.js';
+// // import PrintHello from './First.js';
 
 
-function PrintHelloAgain() {
-    console.log("Hello Again, World!");
-}
+// // function PrintHelloAgain() {
+// //     console.log("Hello Again, World!");
+// // }
 
 
-function analixeComplexity() {
-    for (let i = 0; i < 10; i++) {
-        for (let j = 0; j < i; j++) {
-        // Some complex operation
-            console.log(i, " ", j);
-        }
-    }
-}
 
-function f1(n){
-    for (let i = 1; i < n; i *= 2) {
-        console.log(i);
-    }
-}
+// // function f1(n){
+// //     for (let i = 1; i < n; i *= 2) {
+// //         console.log(i);
+// //     }
+// // }
 
-function f2(n){
-    for (let i = 1; i < n; i++) {
-        for (let j = 1; j < n; j+=i) {
-            console.log(i, " ", j);
-        }
-    }
-}
-f2(40);
-// f1(40);
+// // function f2(n){
+// //     for (let i = 1; i < n; i++) {
+// //         for (let j = 1; j < n; j+=i) {
+// //             console.log(i, " ", j);
+// //         }
+// //     }
+// // }
+// // // f2(40);
+
+
+// // function f3(n){
+// //     for (let i = 1; i < n; i++) {
+// //         for (let j = 1; j < n; j+=i) {
+// //             console.log(i, " ", j);
+// //         }
+// //      }
+// // }
+// // // f1(40);
+// // // analixeComplexity();
+// // // PrintHello();
+// // // PrintHelloAgain();
+
+// function analixeComplexity() {
+//     for (let i = 0; i < 10; i++) {
+//         for (let j = 0; j < i; j++) {
+//         // Some complex operation
+//             console.log(i, " ", j);
+//             if(i <= 5){
+              
+//             }
+//         }
+//     }
+// }
 // analixeComplexity();
-// PrintHello();
-// PrintHelloAgain();
+
+void function test(a , b) {
+    console.log("This is a self-invoking function!");
+    if(a === b){
+
+        console.log("a is equal to b");
+    }
+
+    if(a <= b){
+
+        console.log("a is less than b");
+    }
+
+}
+(2 , 3);
+
