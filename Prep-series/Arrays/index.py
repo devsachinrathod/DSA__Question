@@ -78,16 +78,18 @@
 # call2 = call1(10)
 # print(call1(20))
 # print(call2(10))
-
+from datetime import datetime 
 
 def fun1():
+    now = datetime.now()
+    print(now.strftime("%m/%d/%Y, %H:%M:%S"))
     x ="sachin"
     def fun2(name):
         print(name , x)
         def fun3(surname):
             print(x , name , surname)
-        return fun2
+        return fun3
     return fun2
 cal1 = fun1()
-cal2 = cal1("rathod")
-cal3 = cal2("pawar")
+cal2 = cal1("rathod 1")
+cal3 = cal2("pawar 2")
